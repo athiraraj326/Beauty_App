@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyZone</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="">
+        <!-- navbar -->
+        <nav class="p-3 flex bg-bgColor justify-between items-center text-white">
+            <h1 class="text-4xl font-bold">BeautyZone</h1>
+            <ul class="hidden md:flex gap-12 font-bold" id="nav-menu">
+                <li class="px-5 hover:text-gray-500"><a class="no-underline" href="#home">Home</a></li>
+                <li class="px-5 hover:text-gray-500"><a class="no-underline" href="#products">Our Products</a></li>
+                <li class="px-5 hover:text-gray-500"><a class="no-underline" href="#blog">Blog</a></li>
+                <li class="px-5 hover:text-gray-500"><a class="no-underline" href="#Contact">Contact Us</a></li>
+            </ul>
+            <div class="p-2 text-2xl md:hidden cursor-pointer" onclick="handleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="fixed hidden bg-bgColor inset-0 p-3 h-96 z-10" id="nav-dialog">
+                <div id="nav-bar" class="flex justify-between">
+                    <h1 class="text-4xl font-bold">BeautyZone</h1>
+                    <div class="p-2 text-2xl md:hidden cursor-pointer" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <a href="" class="font-medium m-3 p-3 text-xl hover:text-gray-500 block">Home</a>
+                    <a href="" class="font-medium m-3 p-3 text-xl hover:text-gray-500 block">Our Products</a>
+                    <a href="" class="font-medium m-3 p-3 text-xl hover:text-gray-500 block">Blog</a>
+                    <a href="" class="font-medium m-3 p-3 text-xl hover:text-gray-500 block">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+        <!-- home -->
+        <section id="home">
+            <div class="relative">
+                <img width="100%" src="./images/banner.avif" alt="">
+                <div class="absolute top-1/3 text-center w-full">
+                    <h1 class="md:text-6xl text-xl text-white font-bold">Beauty begins the moment you <br> decide to be
+                        yourself.</h1>
+                    <button
+                        class="text-white md:text-xl text-sm bg-red-700  px-5 py-2 rounded hover:bg-transparent hover:border mt-5 md:mt-10">Discover
+                        Now</button>
+                </div>
+            </div>
+        </section>
+        <!-- categories -->
+        <div class="container mx-auto p-10">
+            <div class="md:grid grid-cols-2 gap-5  my-10 ">
+                <div class="relative cursor-pointer hover:scale-90">
+                    <img src="./images/banner01.webp" alt="" class="w-full max-h-full">
+                    <div class="absolute top-0 md:ml-10 md:mt-10 mt-5 ml-2 w-10/12 hover:border-b-4 md:p-5">
+                        <h1 class="md:text-4xl text-2xl font-bold">FACE</h1>
+                        <h1 class="font-thin md:text-4xl text-2xl">MAKEUP</h1>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer hover:scale-90">
+                    <img src="./images/banner02.webp" alt="" class="w-full max-h-full">
+                    <div class="absolute top-0 md:ml-10 md:mt-10 mt-5 ml-2 w-10/12 hover:border-b-4 md:p-5">
+                        <h1 class="md:text-4xl text-2xl font-bold">EYE</h1>
+                        <h1 class="font-thin md:text-4xl text-2xl">MAKEUP</h1>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer hover:scale-90">
+                    <img src="./images/banner03.webp" alt="" class="w-full max-h-full">
+                    <div class="absolute top-0 md:ml-10 md:mt-10 mt-5 ml-2 w-10/12 hover:border-b-4 md:p-5">
+                        <h1 class="md:text-4xl text-2xl font-bold">LIP</h1>
+                        <h1 class="font-thin md:text-4xl text-2xl">MAKEUP</h1>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer hover:scale-90">
+                    <img src="./images/banner04.webp" alt="" class="w-full max-h-full">
+                    <div class="absolute top-0 md:ml-10 md:mt-10 mt-5 ml-2 w-10/12 hover:border-b-4 md:p-5">
+                        <h1 class="md:text-4xl text-2xl font-bold">GIFT SETS</h1>
+                        <h1 class="font-thin md:text-4xl text-2xl">MAKEUP KITS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- products -->
+        <section id="products">
+            <div class="flex justify-center md:text-3xl text-sm font-semibold my-10 cursor-pointer py-5">
+                <h3 class="px-5 text-red-500">Best sellers</h3>
+                <h3 class="px-5 hover:text-red-500">New arrivals</h3>
+                <h3 class="px-5 hover:text-red-500">Items sale</h3>
+            </div>
+            <div class="md:grid grid-cols-4 gap-5 justify-center items-center container mx-auto my-10 p-10">
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product1.png" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2">Lipstick</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$80.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product2.png" alt="" class="w-full h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Eyeliner</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$43.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product3.png" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Kajal</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$25.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product4.webp" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Compact Powder</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$30.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product5.png" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Mascara</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$40.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product6.jpg" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Hair Shampoo</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$74.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product7.png" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Foundation</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$98.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="cursor-pointer hover:scale-90">
+                        <img src="./images/product8.png" alt="" class="w-full max-h-full">
+                    </div>
+                    <div class="text-center my-10">
+                        <h1 class="text-3xl font-semibold py-2 cursor-pointer">Concealer</h1>
+                        <div class="text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h1 class="text-xl py-2">$62.00</h1>
+                        <button class="px-5 py-2 bg-red-600 rounded text-white text-base hover:bg-red-400">Shop
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- discount -->
+        <div class="relative">
+            <img src="./images/discount-img1.jpg" alt="">
+            <div class="absolute top-0 right-0 md:p-5 md:mt-10">
+                <h3 class="md:text-xl sm:text-sm font-semibold underline cursor-pointer md:py-2">Up To 40% Discount</h3>
+                <h1 class="md:text-6xl sm:text-sm font-medium py-2">Kelp & Mint Volumizing <br> Shampoo</h1>
+                <button class="bg-red-600 text-white md:px-5 px-2 md:py-2 py-1 rounded hover:bg-red-400 md:mt-10">Shop
+                    Now</button>
+            </div>
+        </div>
+        <!-- blog -->
+        <section id="blog">
+            <h2 class="text-4xl my-10 text-center py-5 cursor-pointer hover:text-red-500">From The Blog</h2>
+            <div class="container mx-auto my-10 p-10">
+                <div class="md:grid grid-cols-2">
+                    <div class="md:grid grid-cols-2">
+                        <div class="relative cursor-pointer hover:scale-90">
+                            <img src="./images/blog-1.jpg" alt="">
+                            <div
+                                class="absolute top-0 h-full w-full bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 text-white">
+                                <h1 class="mr-4 text-xl underline">Read More</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="text-red-600 p-5">March 3, 2024</h1>
+                            <h3 class="text-2xl px-5">Get it Hurry with Budget</h3>
+                            <h3 class="text-xl p-5">Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod
+                                tempor inquaerat.</h3>
+                            <div class="p-5">
+                                <button class="px-3 py-2 bg-red-600 rounded text-white hover:bg-red-400">Read
+                                    More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:grid grid-cols-2">
+                        <div class="relative cursor-pointer hover:scale-90">
+                            <img src="./images/blog-2.jpg" alt="">
+                            <div
+                                class="absolute top-0 h-full w-full bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 text-white">
+                                <h1 class="mr-4 text-xl underline">Read More</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="text-red-600 p-5">June 14, 2024</h1>
+                            <h3 class="text-2xl px-5">Look what's trending</h3>
+                            <h3 class="text-xl p-5">Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod
+                                tempor inquaerat.</h3>
+                            <div class="p-5">
+                                <button class="px-3 py-2 bg-red-600 rounded text-white hover:bg-red-400">Read
+                                    More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- popular brand -->
+        <div class="my-10">
+            <h2 class="text-4xl my-10 text-center py-5 cursor-pointer hover:text-red-500">Popular Brands</h2>
+            <div class="container mx-auto">
+                <div class="flex flex-wrap gap-4 justify-between px-5 py-5 cursor-pointer">
+                    <img src="./images/brand01.webp" alt="" class="hover:scale-110">
+                    <img src="./images/brand02.webp" alt="" class="hover:scale-110">
+                    <img src="./images/brand03.webp" alt="" class="hover:scale-110">
+                    <img src="./images/brand04.webp" alt="" class="hover:scale-110">
+                    <img src="./images/brand05.webp" alt="" class="hover:scale-110">
+                    <img src="./images/brand06.webp" alt="" class="hover:scale-110">
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="bg-bgColor text-white w-full overflow-hidden p-5" id="Contact">
+            <div class="flex flex-wrap justify-between p-10">
+                <div>
+                    <h1 class="text-3xl font-bold cursor-pointer">BeautyZone</h1>
+                    <p class="text-xl my-10">Lorem ipsum dolor sit amet, <br>consemi cteta dipisi cing elit, sed <br>do
+                        eiusmod tempor.</p>
+                    <div class="flex justify-between my-10 px-5 text-2xl">
+                        <i class="fa-brands fa-facebook-f hover:text-black/100"></i>
+                        <i class="fa-brands fa-twitter hover:text-black/100"></i>
+                        <i class="fa-brands fa-whatsapp hover:text-black/100"></i>
+                        <i class="fa-brands fa-instagram hover:text-black/100"></i>
+                        <i class="fa-brands fa-linkedin-in hover:text-black/100"></i>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-semibold cursor-pointer">MY ACCOUNT</h1>
+                    <div class="text-xl my-10">
+                        <ul class="flex flex-col gap-5 cursor-pointer">
+                            <li class="hover:text-gray-500">FAQs</li>
+                            <li class="hover:text-gray-500">Payments</li>
+                            <li class="hover:text-gray-500">Track Your Order</li>
+                            <li class="hover:text-gray-500">Return Polcy</li>
+                            <li class="hover:text-gray-500">Warranty</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-semibold cursor-pointer">SHOP GUIDE</h1>
+                    <div class="text-xl my-10">
+                        <ul class="flex flex-col gap-5 cursor-pointer">
+                            <li class="hover:text-gray-500">Hot Sale</li>
+                            <li class="hover:text-gray-500">Best Sellar</li>
+                            <li class="hover:text-gray-500">Suppliers</li>
+                            <li class="hover:text-gray-500">Our Store</li>
+                            <li class="hover:text-gray-500">Deal of The Day</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-semibold cursor-pointer">CONTACT INFO</h1>
+                    <div class="text-xl my-10"></div>
+                    <ul class="flex flex-col gap-5">
+                        <li><i class="fa-solid fa-location-dot"></i><span class="pl-5">Lusmod tempor incididunt</span>
+                        </li>
+                        <li><i class="fa-solid fa-envelope"></i><span class="pl-5">Lusmod incidiunt wesbvu</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span class="pl-5">+012 345 678 102</span></li>
+                        <li><i class="fa-regular fa-clock"></i><span class="pl-5">8.00 am-6.00 pm</span></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    const navDialog = document.getElementById('nav-dialog')
+    function handleMenu(){
+        navDialog.classList.toggle('hidden')       
+    }
+</script>
+</html>
